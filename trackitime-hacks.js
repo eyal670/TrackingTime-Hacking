@@ -20,6 +20,7 @@ $( document ).ajaxStop(function(){
   if($('#QuickTask').css('display')!='none'){
     if(!$('.jump-to-task').length){
       $('.task_name .title').map(function(){
+         $(this).before('<a href="https://pro.trackingtime.co/#/project/'+$(this).closest('li').attr('data-project_id')+'/task/'+$(this).attr('data-taskid')+'" class="jump-to-task">⤻</a>');
         $(this).before('<a href="https://pro.trackingtime.co/#/task/'+$(this).attr('data-taskid')+'" class="jump-to-task">🡭</a>');
       });
     }
